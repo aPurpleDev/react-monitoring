@@ -5,6 +5,7 @@ import Osmetrics from "./osmetrics";
 import logo from './softia_logo.png';
 import './App.css';
 import Rammetrics from "./rammetrics";
+import Utilityclock from "./utilityclock";
 
 const softiaStyle = {
     overflow: 'hidden',
@@ -78,6 +79,7 @@ class App extends React.Component {
             <div className="App">
                 <header className="App-header">
                     <h1> Monitoring Dashboard </h1>
+                    <Utilityclock/>
                     <img src={logo} className="App-logo" alt="logo" style={softiaStyle}/>
                     <h1>
                         Live CPU Usage
@@ -87,6 +89,7 @@ class App extends React.Component {
                         Live Free RAM
                     </h1>
                     <Rammetrics rammetrics={this.state.rammetrics}/>
+
                 </header>
             </div>
         );
